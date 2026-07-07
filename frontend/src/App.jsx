@@ -2,6 +2,7 @@ import './App.css'
 import Hero from './components/Hero'
 import SummaryCard from './components/SummaryCard'
 import FeatureCard from './components/FeatureCard'
+import ProductList from './components/ProductList'
 
 function App() {
   const features = [
@@ -44,6 +45,8 @@ function App() {
           />
         ))}
       </section>
+      
+      <ProductList />
     </main>
   )
 }
