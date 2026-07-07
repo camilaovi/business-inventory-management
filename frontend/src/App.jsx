@@ -1,121 +1,88 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+    <main className="app">
+      <section className="hero">
+        <div className="hero-content">
+          <p className="tag">Inventory and sales management</p>
+
+          <h1>Business Inventory Management</h1>
+
+          <p className="description">
+            A web platform designed to manage products, inventory, customers,
+            and sales from a single place. This project is part of a software
+            engineering portfolio focused on full stack development and business
+            process optimization.
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          <div className="hero-actions">
+            <button className="primary-button">View products</button>
+            <button className="secondary-button">Create product</button>
+          </div>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="summary-card">
+          <h2>Dashboard summary</h2>
+
+          <div className="summary-grid">
+            <article>
+              <span>Products</span>
+              <strong>128</strong>
+            </article>
+
+            <article>
+              <span>Sales</span>
+              <strong>56</strong>
+            </article>
+
+            <article>
+              <span>Customers</span>
+              <strong>34</strong>
+            </article>
+
+            <article>
+              <span>Low stock</span>
+              <strong>9</strong>
+            </article>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section className="features">
+        <article className="feature-card">
+          <h3>Product management</h3>
+          <p>
+            Register, update, and organize products with information such as
+            category, price, available quantity, and production cost.
+          </p>
+        </article>
+
+        <article className="feature-card">
+          <h3>Inventory control</h3>
+          <p>
+            Monitor available stock, identify low inventory levels, and support
+            better decisions for purchasing and production.
+          </p>
+        </article>
+
+        <article className="feature-card">
+          <h3>Sales registration</h3>
+          <p>
+            Record sales, calculate totals, and update inventory automatically
+            after each transaction.
+          </p>
+        </article>
+
+        <article className="feature-card">
+          <h3>Business reports</h3>
+          <p>
+            Display basic indicators related to sales, customers, products, and
+            inventory behavior.
+          </p>
+        </article>
+      </section>
+    </main>
   )
 }
 
